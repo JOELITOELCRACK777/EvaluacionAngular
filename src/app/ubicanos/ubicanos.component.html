@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="container">
+        <div class="col-md-12">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7567.773664706113!2d-70.29908318017492!3d-18.48878459789242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2scl!4v1730993555924!5m2!1ses!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+<form [formGroup]="formularioForm" (ngSubmit)="enviarDatos()">
+    <div class="mb-3">
+      <label for="exampleInputName" class="form-label">Nombre</label>
+      <input type="text" class="form-control" formControlName="nombre" id="exampleInputName">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputLastname" class="form-label">Apellido</label>
+      <input type="text" class="form-control" formControlName="apellido" id="exampleInputLastname">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail" class="form-label">Correo</label>
+        <input type="email" class="form-control" formControlName="email" id="exampleInputEmail">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPhone" class="form-label">Celular</label>
+        <input type="number" class="form-control" formControlName="fono" id="exampleInputPhone">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputMessage" class="form-label">Mensaje</label> 
+        <textarea class="form-control" formControlName="mensaje" id=""></textarea>
+      </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+</div>
+
+<div class="card mt-4 pb-3" *ngIf="datos_formulario != null">
+  <div class="card-body" style="color: blue;">
+      <b class="card-text h4">
+          Hola {{datos_formulario.nombre}} {{datos_formulario.apellido}},<br>
+          Gracias por contactarnos. Nos comunicaremos con usted pronto a través de su correo electronico <strong>{{datos_formulario.email}}</strong> o su numero de telefono <strong>{{datos_formulario.fono}}</strong>
+      </b>

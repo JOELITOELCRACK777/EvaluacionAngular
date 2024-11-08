@@ -1,0 +1,58 @@
+.p-sub {
+
+    font-family: 'Kanit', sans-serif;
+    font-size: 25px;
+    color: rgb(0, 255, 128);
+}
+
+.h1-inicio {
+
+    font-family:'Oswald', sans-serif;
+    font-size: 65px;
+}
+
+.nav-logo {
+
+    width: 50px;
+    height: auto;}
+
+.especialidad p {
+    color: #666;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    bottom: 0;
+}
+
+.footer-logo {
+    width: 50px;
+    height: auto;
+}
+
+.footer-info {
+    text-align: left;
+}
+
+.company-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.contact-number {
+    font-size: 1rem;
+}

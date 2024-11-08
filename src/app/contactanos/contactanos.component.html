@@ -1,0 +1,46 @@
+
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Formulario de Contacto</h1>
+
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+        <form [formGroup]="formularioForm" (ngSubmit)="enviarDatos()" id="contactForm" class="border p-4 rounded shadow-sm bg-light">
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre:</label>
+            <input type="text" class="form-control" id="nombre" formControlName="nombre" required>
+          </div>
+          
+          <div class="mb-3">
+            <label for="apellido" class="form-label">Apellido:</label>
+            <input type="text" class="form-control" id="apellido" formControlName="apellido" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo Electrónico:</label>
+            <input type="email" class="form-control" id="email" formControlName="email" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="telefono" class="form-label">Teléfono:</label>
+            <input type="text" class="form-control" id="telefono" formControlname="fono" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="mensaje" class="form-label">Mensaje:</label>
+            <textarea class="form-control" id="mensaje" formControlName="mensaje" rows="4" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100">Enviar</button>
+        </form>
+        <div class="card mt-4 pb-3" *ngIf="datos_formulario != null">
+            <div class="card-body">
+                <b class="card-text h4" style="color:blue;">
+                    Hola {{datos_formulario.nombre}} {{datos_formulario.apellido}},<br>
+                    Gracias por contactarnos. Nos comunicaremos con usted pronto a través de su correo electronico <strong>{{datos_formulario.email}}</strong> o su numero de telefono <strong>{{datos_formulario.fono}}</strong>
+                </b>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
